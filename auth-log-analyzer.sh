@@ -45,42 +45,47 @@ zgrep "Failed password" $LOG_FILES | awk -F' ' '{
 echo ""
 
 # 4. Invalid user - Top IPs
-print_header "4. Invalid user - Top IPs (Top $TOP_COUNT)"
-zgrep "Invalid user" $LOG_FILES | awk -F' ' '{
-	for(i=1; i<=NF; i++) {
-		if($i=="from") { print $(i+1); break; }
-	}
-}' | grep -v '^$' | sort | uniq -c | sort -nr | head -n $TOP_COUNT
+print_header "4. Hourly Distribution of Attacks (00:00 - 23:59)"
+zgrep -E "Failed password|Invalid user" $LOG_FILES | awk '{
+	if ($1 ~ /^[0-9]{4}-/) { split($1, a, "T"); split(a[2], b, ":"); print b[1] }
+	else { split($3, a, ":"); print a[1] }
+}' | sort | uniq -c | sort -n
 echo ""
 
 # 5. Hourly Distribution of Attacks
-print_header "5. Hourly Distribution of Attacks (00:00 - 23:59)"
-zgrep -E "Failed password|Invalid user" $LOG_FILES | awk '{print $3}' | cut -d: -f1 | sort | uniq -c | sort -n
+print_header "5. Daily Distribution of Attacks (Top Timeline)"
+zgrep -E "Failed password|Invalid user" $LOG_FILES | awk '{
+	if ($1 ~ /^[0-9]{4}-/) { split($1, a, "T"); print a[1] }
+	else { print $1" "$2 }
+}' | sort | uniq -c | sort -nr | head -n 30
 echo ""
 
 # 6. Daily Distribution of Attacks
-print_header "6. Daily Distribution of Attacks (Top Timeline)"
-zgrep -E "Failed password|Invalid user" $LOG_FILES | awk '{print $1" "$2}' | sort | uniq -c | sort -nr | head -n 30
+print_header "6. Successful Logins Audit (Timeline & Accounts)"
+zgrep "Accepted" $LOG_FILES | awk -F' ' '{
+	user="UNKNOWN"; ip="UNKNOWN";
+	for(i=1; i<=NF; i++) {
+		if($i=="for")  { user=$(i+1); }
+		if($i=="from") { ip=$(i+1); }
+	}
+	# 自動相容新舊格式的時間欄位
+	if ($1 ~ /^[0-9]{4}-/) { split($1, a, "T"); dt=a[1]" "substr(a[2],1,8) }
+	else { dt=$1" "$2" "$3 }
+	
+	print dt " - User: [" user "] | From IP: [" ip "]"
+}' | sort -r | head -n $TOP_COUNT
 echo ""
 
-# 7. Successful Logins Audit
-print_header "7. Successful Logins Audit (Security Verification)"
-#zgrep "Accepted" $LOG_FILES | awk -F' ' '{
-#	user="UNKNOWN"; ip="UNKNOWN";
-#	for(i=1; i<=NF; i++) {
-#		if($i=="for")  { user=$(i+1); }
-#		if($i=="from") { ip=$(i+1); }
-#	}
-#	# Print date, time, user, and source IP
-#	print $1" "$2" "$3" - User: "user" | IP: "ip;
-#}' | sort -r
-#echo ""
-
-zgrep "Accepted" /var/log/auth.log* | awk -F' ' '{
-	for(i=1; i<=NF; i++) {
-		if($i=="from") { print $(i+1); break; }
-	}
-}' | sort | uniq -c | sort -nr
+# 7. 【全新追加】Sudo 提權與越權密碼審計 (檢查 Peter 有沒有變 root)
+print_header "7. Sudo Privilege Escalation Audit"
+zgrep "sudo:" $LOG_FILES | grep -E "COMMAND=|session opened" | awk '{
+	if ($1 ~ /^[0-9]{4}-/) { split($1, a, "T"); dt=a[1]" "substr(a[2],1,8); idx=5 }
+	else { dt=$1" "$2" "$3; idx=5 }
+	# 擷取後續的 sudo 執行文字
+	out=""; for(i=idx; i<=NF; i++) out=out$i" ";
+	print dt " - " out
+}' | sort -r | head -n $TOP_COUNT
+echo ""
 
 # 8. Current Fail2ban Defense Status
 print_header "8. Current Fail2ban Defense Status"
