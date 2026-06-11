@@ -60,80 +60,7 @@ $ sudo ./auth-log-analyzer.sh
     413 username
     407 nvidia
     388 ubnt
-    385 mysql
-    384 student
-    363 test1
-    358 server
-    345 1234
-    342 cirros
-    325 vagrant
-    323 orangepi
-    319 user2
-    311 odoo
-    298 prueba
-    292 hadoop
-    280 public
-    275 test2
-    273 system
-    272 huawei
-    272 a
-    253 samba
-    250 tomcat
-    236 zabbix
-    236 jenkins
-    235 www
-    233 steam
-    230 web
-    229 dev
-    228 vpn
-    211 teste
-    211 support
-    209 linaro
-    206 kali
-    204 squid
-    198 1
-    197 app
-    190 dell
-    189 usuario
-    188 www-data
-    186 apache
-    179 testuser
-    177 nagios
-    170 sshadmin
-    169 centos
-    165 Admin
-    164 backup
-    162 weblogic
-    160 docker
-    152 administrator
-    150 AdminGPON
-    149 es
-    147 nginx
-    146 sshd
-    142 webmaster
-    142 teamspeak
-    142 kafka
-    141 grid
-    139 redis
-    134 gpadmin
-    131 nexus
-    128 developer
-    123 lenovo
-    121 vnc
-    116 abc
-    113 informix
-    110 webadmin
-    110 temp
-    110 client
-    110 admin1
-    106 work
-    106 elasticsearch
-    105 user3
-    105 default
-    105 adm
-    104 install
-    101 node
-    100 ansible
+    ...
      99 bin
      98 upload
      98 minecraft
@@ -162,81 +89,7 @@ $ sudo ./auth-log-analyzer.sh
     292 hadoop
     240 huawei
     234 tomcat
-    230 web
-    222 server
-    220 zabbix
-    220 jenkins
-    219 www
-    213 dev
-    206 debian
-    202 pi
-    199 user2
-    197 app
-    195 test1
-    190 ftp
-    190 dell
-    186 apache
-    177 nagios
-    175 odoo
-    173 vagrant
-    169 centos
-    163 support
-    162 weblogic
-    157 username
-    152 administrator
-    149 es
-    147 testuser
-    144 docker
-    142 webmaster
-    141 grid
-    139 test2
-    139 redis
-    134 gpadmin
-    131 nginx
-    131 nexus
-    130 samba
-    130 prueba
-    128 public
-    126 teamspeak
-    126 kafka
-    123 lenovo
-    121 vnc
-    121 system
-    120 a
-    112 developer
-    110 webadmin
-    106 work
-    106 elasticsearch
-    105 user3
-    101 Admin
-     98 max
-     98 elastic
-     97 informix
-     96 project
-     96 inspur
-     94 temp
-     94 spark
-     94 client
-     93 devuser
-     92 vpn
-     92 ubnt
-     91 debug
-     90 rabbitmq
-     89 adm
-     88 worker
-     88 linux
-     88 infra
-     87 tom
-     87 share
-     87 sftp
-     86 openlava
-     85 node
-     85 ai
-     84 ansible
-     84 adminuser
-     84 abc
-     82 upload
-     82 minecraft
+    ...
      82 elk
      81 steam
      80 hbase
@@ -249,7 +102,7 @@ $ sudo ./auth-log-analyzer.sh
   Failed password - Top Source IPs (Top 100)
 ================================================================================
  211710 192.168.1.12
- 108446 172.16.1.1
+ 108446 192.168.1.171
       4 192.168.1.110
       2 192.168.1.128
 
@@ -269,7 +122,7 @@ $ sudo ./auth-log-analyzer.sh
     375   Account: [oracle] (Invalid/Non-existent)
     342   Account: [student] (Invalid/Non-existent)
 
-[+] Investigating Targeted Accounts from IP: [172.16.1.1]
+[+] Investigating Targeted Accounts from IP: [192.168.1.171]
 --------------------------------------------------
   61854   Account: [root]
    6334   Account: [admin] (Invalid/Non-existent)
@@ -348,32 +201,19 @@ $ sudo ./auth-log-analyzer.sh
 /var/log/auth.log:Jun 11 11:49:12 - User: [rudy] | From IP: [192.168.1.46]
 /var/log/auth.log:Jun 11 11:44:27 - User: [rudy] | From IP: [192.168.1.46]
 /var/log/auth.log:Jun 11 11:33:58 - User: [rudy] | From IP: [10.6.1.180]
-/var/log/auth.log:Jun 11 10:24:52 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 11 07:22:36 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 11 06:52:58 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 11 03:09:53 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 17:14:52 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 17:13:59 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 17:05:56 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 13:03:26 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 12:33:44 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 12:27:14 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 12:18:58 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 12:16:53 - User: [rudy] | From IP: [192.168.1.110]
-/var/log/auth.log:Jun 10 09:41:27 - User: [rudy] | From IP: [192.168.1.110]
 /var/log/auth.log:Jun 10 09:39:46 - User: [rudy] | From IP: [192.168.1.110]
 /var/log/auth.log:Jun 10 07:56:03 - User: [rudy] | From IP: [192.168.1.110]
 /var/log/auth.log:Jun 10 06:23:32 - User: [rudy] | From IP: [192.168.1.110]
 /var/log/auth.log:Jun 10 06:18:58 - User: [rudy] | From IP: [10.6.1.133]
 /var/log/auth.log:Jun 10 06:18:58 - User: [rudy] | From IP: [10.6.1.133]
-/var/log/auth.log.4.gz:May 12 14:04:43 - User: [peter] | From IP: [172.16.1.1]
-/var/log/auth.log.4.gz:May 12 13:32:35 - User: [peter] | From IP: [172.16.1.1]
-/var/log/auth.log.4.gz:May 12 13:31:57 - User: [peter] | From IP: [172.16.1.1]
-/var/log/auth.log.4.gz:May 10 10:40:49 - User: [peter] | From IP: [172.16.1.1]
+/var/log/auth.log.4.gz:May 12 14:04:43 - User: [peter] | From IP: [192.168.1.171]
+/var/log/auth.log.4.gz:May 12 13:32:35 - User: [peter] | From IP: [192.168.1.171]
+/var/log/auth.log.4.gz:May 12 13:31:57 - User: [peter] | From IP: [192.168.1.171]
+/var/log/auth.log.4.gz:May 10 10:40:49 - User: [peter] | From IP: [192.168.1.171]
 /var/log/auth.log.3.gz:May 20 18:32:20 - User: [tony] | From IP: [192.168.1.12]
-/var/log/auth.log.3.gz:May 20 12:21:00 - User: [peter] | From IP: [172.16.1.1]
-/var/log/auth.log.3.gz:May 20 12:19:51 - User: [peter] | From IP: [172.16.1.1]
-/var/log/auth.log.3.gz:May 19 21:03:14 - User: [peter] | From IP: [172.16.1.1]
+/var/log/auth.log.3.gz:May 20 12:21:00 - User: [peter] | From IP: [192.168.1.171]
+/var/log/auth.log.3.gz:May 20 12:19:51 - User: [peter] | From IP: [192.168.1.171]
+/var/log/auth.log.3.gz:May 19 21:03:14 - User: [peter] | From IP: [192.168.1.171]
 /var/log/auth.log.1:Jun 5 06:04:17 - User: [rudy] | From IP: [10.6.1.133]
 /var/log/auth.log.1:Jun 5 06:04:16 - User: [rudy] | From IP: [10.6.1.133]
 /var/log/auth.log.1:Jun 5 06:03:22 - User: [rudy] | From IP: [192.168.1.128]
@@ -393,70 +233,8 @@ $ sudo ./auth-log-analyzer.sh
 /var/log/auth.log:Jun 11 06:53:22 - root : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/find /home/peter/.ssh/rc /var/tmp/.font-cache-11d9e9/ /tmp/.mozilla-94aa59/ /tmp/tmpgexexufh/ /tmp/.libc.so.6 /tmp/.report-starting.lock /dev/shm/.gconf-985c40/ /dev/shm/.libpthread.so.0 /home/peter/.gstreamer-d80bac/ /home/peter/.mesa-673f8d/ /home/peter/.config/.gtk-bookmarks /home/peter/.cache/.libglib-2.0.so.0 /home/peter/.cache/.libsystem /home/peter/.config/.javago /home/peter/.config/.libdbus-1.so.3 /home/peter/.config/.libsystem /home/tony/.javago -maxdepth 0 -printf %T+ \\tMtime\\t%p\\n%C+ \\tCtime\\t%p\\n
 /var/log/auth.log:Jun 11 06:53:22 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
 /var/log/auth.log:Jun 11 06:53:13 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 11 06:53:13 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:16:31 - root : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/syslog
-/var/log/auth.log:Jun 11 03:16:31 - root : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log /dev/fd/63
-/var/log/auth.log:Jun 11 03:16:31 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:16:31 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:16:10 - root : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/syslog
-/var/log/auth.log:Jun 11 03:16:10 - root : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log /dev/fd/63
-/var/log/auth.log:Jun 11 03:16:10 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:16:10 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:10:35 - rudy : TTY=pts/3 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 11 03:10:35 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:10:27 - rudy : TTY=pts/2 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 11 03:10:27 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:10:20 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 11 03:10:20 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 11 03:10:13 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 11 03:10:13 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 16:40:24 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 16:40:24 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 15:57:44 - rudy : TTY=pts/2 ; PWD=/home/tony/bin ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 15:57:44 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 13:03:42 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 13:03:42 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 12:20:52 - root : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/dpkg -P binutils
-/var/log/auth.log:Jun 10 12:20:52 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 12:19:13 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 12:19:13 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 12:18:13 - root : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/dpkg -i --force-depends ./binutils_2.34-6ubuntu1.11_amd64.deb
-/var/log/auth.log:Jun 10 12:18:13 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 09:41:35 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 09:41:35 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 07:56:55 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 07:56:55 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:50:38 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/cat /home/peter/.bash_history
-/var/log/auth.log:Jun 10 06:50:38 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:50:22 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/grep Accepted /var/log/auth.log
-/var/log/auth.log:Jun 10 06:50:22 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:45:11 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/od -An -c /var/tmp/.font-cache-11d9e9/.javago
-/var/log/auth.log:Jun 10 06:45:11 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:44:48 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:44:47 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/od -An -c /var/tmp/.font-cache-11d9e9/.javago
-/var/log/auth.log:Jun 10 06:43:02 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/od -An -c /var/tmp/.font-cache-11d9e9/.javago
-/var/log/auth.log:Jun 10 06:43:02 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:41:37 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/ls -la /var/tmp/.font-cache-11d9e9/
-/var/log/auth.log:Jun 10 06:41:37 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:39:25 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/crontab -u peter -l
-/var/log/auth.log:Jun 10 06:39:25 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:38:43 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/grep -i connect /var/log/auth.log
-/var/log/auth.log:Jun 10 06:38:43 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:38:31 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/grep -i connect /var/log/auth.log
-/var/log/auth.log:Jun 10 06:38:31 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:35:14 - rudy : TTY=pts/0 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/ss -tupan
-/var/log/auth.log:Jun 10 06:35:14 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:23:41 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/bash
-/var/log/auth.log:Jun 10 06:23:41 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:18:35 - rudy : TTY=tty1 ; PWD=/etc/netplan ; USER=root ; COMMAND=/usr/sbin/netplan try
-/var/log/auth.log:Jun 10 06:18:35 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log:Jun 10 06:17:19 - rudy : TTY=tty1 ; PWD=/etc/netplan ; USER=root ; COMMAND=/usr/bin/vim 00-installer-config.yaml
-/var/log/auth.log:Jun 10 06:17:19 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log.1:Jun 5 06:45:56 - peter : user NOT in sudoers ; TTY=unknown ; PWD=/home/peter ; USER=root ; COMMAND=/usr/sbin/chpasswd
-/var/log/auth.log.1:Jun 5 06:43:34 - rudy : TTY=pts/4 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/crontab -u peter -l
-/var/log/auth.log.1:Jun 5 06:43:34 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
-/var/log/auth.log.1:Jun 5 06:03:41 - rudy : TTY=pts/1 ; PWD=/home/rudy ; USER=root ; COMMAND=/usr/bin/su
-/var/log/auth.log.1:Jun 5 06:03:41 - pam_unix(sudo:session): session opened for user root by rudy(uid=0)
+...
+
 
 ================================================================================
   Current Fail2ban Defense Status
